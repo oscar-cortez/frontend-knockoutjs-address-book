@@ -1,0 +1,73 @@
+<!--agregar comentarios-->
+<!--CamelCase -->
+<!-- Id's-->
+<!--Tabulacion-->
+<!--Funciones Anominas en variable-->
+<!--Nombres consisos de la variables,funciones,y archivos-->
+<!--JavaDocs-->
+<!--Modularizacion de codigo -->
+<!--Hacer Commit seguidos y en partes importantes -->
+
+<html>
+	<head>
+		 <title>Frontend-Address-Book</title>
+		<link rel = "stylesheet" type = "text/css" href="bootstrap/css/bootstrap.css">
+		<link rel = "stylesheet" type = "text/css" href="bootstrap/css/bootstrap.min.css">   
+		<link rel = "stylesheet" type = "text/css" href="bootstrap/css/bootstrap-theme.min.css">
+		<link rel = "stylesheet" type = "text/css" href="bootstrap/css/bootstrap-theme.css">
+		<link rel = "stylesheet" type = "text/css" href="css/styles.css">	
+	</head>
+	
+	<body>
+		<div class="container">	
+			<div class="row">
+		   		<div class="col-md-12">
+					<div class="jumbotron">  			
+	  				 	<h2>Address Book with KnockoutJS</h2>
+	    			</div>
+				</div>
+			</div>
+				<div class="informacionDeContactos"> 
+       				 <h2>Contacts</h2>
+   					 <div id='contactsList'>
+        				<table class='contactsEditor'>
+				            <tr>
+				                <th>First name</th>
+				                <th>Last name</th>
+				                <th>Phone numbers</th>
+				            </tr>
+            				<tbody data-bind="foreach: contacts" class="table-responsive">
+			              		  <tr>
+					                    <td>
+					                        <input data-bind='value: firstName' />
+					                        <div><a href='#' data-bind='click: $root.removeContact'>Delete</a></div>
+					                    </td>
+					                    <td><input data-bind='value: lastName' /></td>
+					                    <td>
+	                        <table class="table">
+	                            <tbody data-bind="foreach: phones">
+	                                <tr>
+	                                    <td><input data-bind='value: type' /></td>
+	                                    <td><input data-bind='value: number' /></td>
+	                                    <td><a href='#' data-bind='click: $root.removePhone'>Delete</a></td>
+	                                </tr>
+	                            </tbody>
+	                        </table>
+	                        <a href='#' data-bind='click: $root.addPhone'>Add number</a>
+	                    				</td>
+	               				 </tr>
+            				</tbody>
+        				</table>
+    				</div>
+				    <p>
+				        <button data-bind='click: addContact'>Add a contact</button>
+				        <button data-bind='click: save, enable: contacts().length > 0'>Save to JSON</button>
+				    </p>
+		     		<textarea data-bind='value: lastSavedJson' rows='5' cols='60' disabled='disabled'> </textarea>		    
+				</div>
+		</div>
+		<script  type="text/javascript"  src="http://knockoutjs.com/downloads/knockout-3.2.0.js "></script>
+	    <script type="text/javascript" src="js/script.js"></script>
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	</body>
+</html>
