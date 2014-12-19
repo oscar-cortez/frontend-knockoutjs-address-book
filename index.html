@@ -1,24 +1,18 @@
-<!--agregar comentarios-->
-<!--CamelCase -->
-<!-- Id's-->
-<!--Tabulacion-->
-<!--Funciones Anominas en variable-->
-<!--Nombres consisos de la variables,funciones,y archivos-->
-<!--JavaDocs-->
-<!--Modularizacion de codigo -->
-<!--Hacer Commit seguidos y en partes importantes -->
 
 <html>
 	<head>
 		 <title>Frontend-Address-Book</title>
+		 <!--Bootstrap-->
 		<link rel = "stylesheet" type = "text/css" href="bootstrap/css/bootstrap.css">
 		<link rel = "stylesheet" type = "text/css" href="bootstrap/css/bootstrap.min.css">   
 		<link rel = "stylesheet" type = "text/css" href="bootstrap/css/bootstrap-theme.min.css">
 		<link rel = "stylesheet" type = "text/css" href="bootstrap/css/bootstrap-theme.css">
+		<!--CSS-->
 		<link rel = "stylesheet" type = "text/css" href="css/styles.css">	
 	</head>
 	
 	<body>
+		<!--Titulo del Ejercicio-->
 		<div class="container">	
 			<div class="row">
 		   		<div class="col-md-12">
@@ -27,6 +21,7 @@
 	    			</div>
 				</div>
 			</div>
+				<!-- Aca Es donde se guarda la informacion de los contactos-->
 				<div class="informacionDeContactos"> 
        				 <h2>Contacts</h2>
    					 <div id='contactsList'>
@@ -60,12 +55,14 @@
         				</table>
     				</div>
 				    <p>
+				    <!--Botones de agregar contactos y guardar en JSON-->
 				        <button data-bind='click: addContact'>Add a contact</button>
 				        <button data-bind='click: save, enable: contacts().length > 0'>Save to JSON</button>
 				    </p>
 		     		<textarea data-bind='value: lastSavedJson' rows='5' cols='60' disabled='disabled'> </textarea>		    
 				</div>
 		</div>
+		<!-- Archivo Knockout , Javascript , Jquery-->
 		<script  type="text/javascript"  src="http://knockoutjs.com/downloads/knockout-3.2.0.js "></script>
 	    <script type="text/javascript" src="js/script.js"></script>
 		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>

@@ -1,3 +1,4 @@
+//Arreglo donde estan los datos de los contactos
 var initialData = [
     { firstName: "Danny", lastName: "LaRusso", phones: [
         { type: "Mobile", number: "(555) 121-2121" },

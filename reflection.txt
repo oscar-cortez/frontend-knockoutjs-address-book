@@ -1,0 +1,44 @@
+What did you learn in this lesson?
+
+I learned how to work with Binding context also with map and how to work with arrays
+
+---------------------------------------------------------------------
+How did you use Knockout.JS?
+
+I use knockout for the use and handling of data and also to create the JSON file using this Function:
+ self.save  = function () {
+         self.lastSavedJson (JSON.stringify (ko.toJS (self.contacts), null, 2));
+     };
+
+---------------------------------------------------------------------
+Explain how and why you solved the user stories with technical details.
+
+-As a user, I must be able to view my contact list, with first and last name, and phone numbers.
+
+first thing I did is to create array where theb contact      information is saved
+--------------------------------------------------------------------
+-As a user, I must be able to add a new contact with all his information.
+
+This user story to add a button to add contacts also add fields to enter the contact data so also add the button to erase
+---------------------------------------------------------------------
+-As a user I must be able to delete contacts from my address book.
+
+add a delete button and it deletes the item in the list
+---------------------------------------------------------------------
+-As a user I must be able to add and remove phone numbers to any individual contact.
+
+add a delete button and it deletes the item in the list
+---------------------------------------------------------------------
+-As a backend developer, I must receive all the address book contacts as a JSON so I can store it in a database.
+
+I found this function 
+    self.save = function() {
+        self.lastSavedJson(JSON.stringify(ko.toJS(self.contacts), null, 2));
+    };
+ 
+    self.lastSavedJson = ko.observable("")
+};
+and this add the informacion
+
+
+---------------------------------------------------------------------
