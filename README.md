@@ -32,4 +32,4 @@ Answer the following questions in the [reflection.txt](README.md) file.
 2. How did you use Knockout.JS?
 3. Explain how and why you solved the user stories with technical details.
 
-Visit my page : 
+Visit my page :  http://oscar99.github.io/frontend-knockoutjs-address-book. 
